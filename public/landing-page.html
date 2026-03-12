@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tomato Delivery App</title>
+  <style>
+        body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #ff6b6b, #f7d794);
+      color: #fff;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      text-shadow: 1px 1px 6px rgba(0,0,0,0.2);
+    }
+
+    .button-container {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    button {
+      padding: 15px 40px;
+      font-size: 1.2rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .user {
+      background-color: #27ae60;
+    }
+    .user:hover {
+      background-color: #2ecc71;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+
+    .admin {
+      background-color: #c0392b;
+    }
+    .admin:hover {
+      background-color: #e74c3c;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+
+    /* Floating tomato icon animation */
+    .tomato-icon {
+      font-size: 4rem;
+      margin-bottom: 20px;
+      animation: float 2s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+    }
+
+    @media(max-width: 500px) {
+      h1 { font-size: 2rem; }
+      button { width: 100%; }
+      .button-container { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to Tomato Delivery App</h1>
+  <p>Select your role:</p>
+  <div>
+    <button class="user" onclick="redirect('user')">User</button>
+    <button class="admin" onclick="redirect('admin')">Admin</button>
+  </div>
+
+  <script>
+    function redirect(role) {
+      if(role === 'user') {
+        window.location.href = "https://food-frontend-woad.vercel.app/";
+      } else if(role === 'admin') {
+        window.location.href = "https://food-admin-nu.vercel.app/"; // replace with your admin link
+      }
+    }
+  </script>
+</body>
+</html>

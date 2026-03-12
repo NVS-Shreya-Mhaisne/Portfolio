@@ -1,0 +1,108 @@
+#about {
+    width: 100%;
+    min-height: 90vh;
+    /* background-color: #e0c3fc; */
+    margin: 0px auto 2rem ;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    overflow: hidden;
+    position: relative;
+    scroll-margin-top: 60px;
+
+}
+#about::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 12px;
+    padding: 4px;
+    background-size: 600% 600% 600%;
+    animation: borderAnim 6s ease infinite;
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    pointer-events: none;
+}
+
+@keyframes borderAnim {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+.about-header {
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 1rem;
+}
+
+.about-name {
+    font-size: 2.5rem;
+    font-weight: bold;
+    background: linear-gradient(to right, #8ec5fc, #e0c3fc);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.about-icons {
+    display: flex;
+    align-items: center;
+}
+
+.about-icons a {
+    margin-left: 1rem;
+    font-size: 2rem;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.about-icons a:hover {
+    color: rgb(148, 112, 241);
+}
+
+/* Paragraph Section */
+.about-description {
+    width: 100%;
+    max-width: 900px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 750px) {
+    #about {
+        scroll-margin-top: 80px;
+
+        padding: 1.5rem;
+    }
+
+    .about-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .about-icons {
+        margin-top: 0.5rem;
+    }
+
+    .about-name {
+        font-size: 2rem;
+    }
+}

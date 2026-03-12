@@ -1,0 +1,144 @@
+.footer {
+  /* background-color: #e7e7e7; */
+  color: #fff;
+  padding: 20px 40px;
+  margin-top: 50px;
+}
+
+/* ---------- CONTAINER ---------- */
+.footer-container {
+  display: flex;
+  justify-content: space-between;  
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* ---------- LEFT SECTION ---------- */
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* ---------- TAGLINE ---------- */
+.footer-brand p {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #fff;
+}
+
+/* ---------- LINKS ---------- */
+.footer-links {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+  color: #d56bed;
+  transform: scale(1.2);
+}
+
+/* ---------- SOCIAL ICONS ---------- */
+.footer-socials {
+  display: flex;
+  gap: 12px;
+}
+
+.footer-socials a {
+  color: #fff;
+  font-size: 1.2rem;
+  transition: 0.3s;
+}
+
+.footer-socials a:hover {
+  color: #e897fa;
+  transform: scale(1.2);
+}
+
+/* ---------- RIGHT SECTION ---------- */
+.footer-right {
+  font-size: 0.9rem;
+  color: #f1f1f1;
+  white-space: nowrap;
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .footer {
+    padding: 20px 30px;
+  }
+
+  .footer-container {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .footer-left {
+    justify-content: center;
+  }
+
+  .footer-right {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .footer {
+    padding: 20px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .footer-left {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .footer-links {
+    justify-content: center;
+  }
+
+  .footer-socials {
+    justify-content: center;
+  }
+
+  .footer-right {
+    font-size: 0.85rem;
+  }
+}
+
+/* Small Phones */
+@media (max-width: 480px) {
+  .footer-brand p {
+    font-size: 0.85rem;
+  }
+
+  .footer-links a {
+    font-size: 0.85rem;
+  }
+
+  .footer-socials a {
+    font-size: 1.1rem;
+  }
+
+  .footer-right {
+    font-size: 0.8rem;
+  }
+}
